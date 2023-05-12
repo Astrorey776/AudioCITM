@@ -9,26 +9,35 @@ public class FootstepSound : MonoBehaviour
 
     public string material;
 
-    void PlayFootstepSound()
-    {
+    public float trTime = 0.5f;
 
+    void Update()
+    {
+ 
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.volume = Random.Range(0.9f,1.0f);
         audioSource.pitch = Random.Range(0.9f,1.1f);
 
-        switch(material)
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && trTime <=0)
         {
-            case "Grass":
+        trTime = 0.5f;
+            switch (material)
+            {
+                case "Grass":
                     audioSource.PlayOneShot(footstepsOnGrass);
-                break;
+                    break;
 
-            case "Tile":
+                case "Tile":
                     audioSource.PlayOneShot(footstepsOnTile);
-                break;
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
+       
+        trTime -= 0.01f;
+        
     }
 
     void OnCollisionEnter(Collision collision)
