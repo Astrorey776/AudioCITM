@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-9060788401402303172
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Anecoic
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: cbe275aaa43a1a54c97d5a5bd131dd06
+  m_FloatValues:
+    18af4214b76570a4590beac22d2ae850: -71.776825
+    d52669fa5dca3e449a4c3be969aad508: -80
+    2585b32f27734a7438703515caf5b0b8: -72.92903
+  m_TransitionOverrides: {}
 --- !u!245 &-1705452058526148180
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -25,6 +39,7 @@ AudioMixerController:
   m_Snapshots:
   - {fileID: -1705452058526148180}
   - {fileID: 24500006}
+  - {fileID: -9060788401402303172}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -38,7 +53,7 @@ AudioMixerController:
     - fc34ebb11fc0e98488d979ced8d0bcb8
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: -1705452058526148180}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

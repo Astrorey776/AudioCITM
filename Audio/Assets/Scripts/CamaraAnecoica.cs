@@ -3,25 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class EnvironmentChange : MonoBehaviour
+public class CamaraAnecoica : MonoBehaviour
 {
-    public AudioMixerSnapshot outdoorSnapshot;
+    public AudioMixerSnapshot anecoicCamera;
     public AudioMixerSnapshot indoorSnapshot;
-
 
     public float transitionTime = 0.25f;
 
     void OnTriggerEnter(Collider collider)
     {
-       
-        outdoorSnapshot.TransitionTo(transitionTime);
-
+        anecoicCamera.TransitionTo(transitionTime);
+        
     }
+
     void OnTriggerExit(Collider collider)
     {
-       
         indoorSnapshot.TransitionTo(transitionTime);
-
-        
+    
     }
 }
